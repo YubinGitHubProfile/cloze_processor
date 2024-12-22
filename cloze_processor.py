@@ -32,7 +32,7 @@ with open('path/new_cloze_100participants.csv', 'w', newline='', encoding='utf-8
     dictwriter.writeheader()
     dictwriter.writerows(list_of_cloze)
 
-print("Accuracy Added and Exported to new_cloze_116.csv")
+print("Accuracy Added and Exported to new_cloze_100participants.csv")
 
 # Summarize accuracy for each participant
 participant_accuracy = defaultdict(lambda: {'Total': 0, 'Correct': 0})
@@ -49,11 +49,11 @@ for participant, stats in participant_accuracy.items():
     summary_data.append({'Participant ID': participant, 'Total Responses': stats['Total'], 'Correct Responses': stats['Correct'], 'Accuracy Rate': accuracy_rate})
 
 # Export participant accuracy summary
-summary_file_path = 'path/participant_accuracy_summary.csv'
+summary_file_path = 'path/100participants_accuracy_summary.csv'
 with open(summary_file_path, 'w', newline='', encoding='utf-8-sig') as summary_file:
     fieldnames = ['Participant ID', 'Total Responses', 'Correct Responses', 'Accuracy Rate']
     summary_writer = DictWriter(summary_file, fieldnames=fieldnames)
     summary_writer.writeheader()
     summary_writer.writerows(summary_data)
 
-print("Participant Accuracy Summary Exported to participant_accuracy_summary.csv")
+print("Participant Accuracy Summary Exported to 100participants_accuracy_summary.csv")
