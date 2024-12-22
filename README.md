@@ -22,7 +22,3 @@ This project provides a Python-based tool to process raw data from a Cloze Task 
 ## Acknowledgements
 Thanks to Gorilla for providing a platform for behavioral experiment design.
 
-You can install the required libraries using:
-```bash
-pip install csv
-
